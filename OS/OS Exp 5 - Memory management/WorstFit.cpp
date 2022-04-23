@@ -22,33 +22,45 @@ int main()
         // cout << "Partition " << i + 1 << ": ";
         cin >> processesMemory[i];
     }
-    string firstFit[noOfPartitions], notAllocatedProcesses;
+    string worstFit[noOfPartitions], notAllocatedProcesses;
     for (int i = 0; i < noOfPartitions; i++)
     {
-        firstFit[i] = "X";
+        worstFit[i] = "X";
     }
     for (int i = 0; i < noOfProcesses; i++)
     {
         bool isAlloc = false;
+        int maxSize;
         for (int j = 0; j < noOfPartitions; j++)
         {
-            if (processesMemory[i] <= partitionMemory[j])
+            if (processesMemory[i] <= partitionMemory[j] && !isAlloc)
             {
-                partitionMemory[j] -= processesMemory[i];
-                if (firstFit[j] == "X")
-                {
-
-                    firstFit[j] = "P" + to_string(i + 1);
-                }
-                else
-                {
-                    firstFit[j] += ", P" + to_string(i + 1);
-                }
+                maxSize = j;
                 isAlloc = true;
-                break;
+            }
+            else if (processesMemory[i] <= partitionMemory[j])
+            {
+                if (partitionMemory[j] > partitionMemory[maxSize])
+                {
+                    maxSize = j;
+                }
             }
         }
-        if (!isAlloc && notAllocatedProcesses.empty())
+        if (isAlloc)
+        {
+            partitionMemory[maxSize] -= processesMemory[i];
+            if (worstFit[maxSize] == "X")
+            {
+
+                worstFit[maxSize] = "P" + to_string(i + 1);
+            }
+            else
+            {
+                worstFit[maxSize] += ", P" + to_string(i + 1);
+            }
+            isAlloc = true;
+        }
+        else if (!isAlloc && notAllocatedProcesses.empty())
         {
             notAllocatedProcesses = "P" + to_string(i + 1);
         }
@@ -57,10 +69,10 @@ int main()
             notAllocatedProcesses += ", P" + to_string(i + 1);
         }
     }
-    cout << "Partitions\t\tFirst Fit\n";
+    cout << "Partitions\t\tWorst Fit\n";
     for (int i = 0; i < noOfPartitions; i++)
     {
-        cout << tempPMemory[i] << "\t\t\t" << firstFit[i] << "\n";
+        cout << tempPMemory[i] << "\t\t\t" << worstFit[i] << "\n";
     }
     if (notAllocatedProcesses.empty())
     {
