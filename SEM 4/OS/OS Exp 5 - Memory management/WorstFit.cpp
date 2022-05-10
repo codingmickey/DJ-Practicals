@@ -4,22 +4,22 @@ using namespace std;
 int main()
 {
     int noOfPartitions;
-    // cout << "Enter the number of patitions: ";
+    cout << "Enter the number of patitions: ";
     cin >> noOfPartitions;
     int partitionMemory[noOfPartitions], tempPMemory[noOfPartitions];
     for (int i = 0; i < noOfPartitions; i++)
     {
-        // cout << "Partition " << i + 1 << ": ";
+        cout << "Partition " << i + 1 << ": ";
         cin >> partitionMemory[i];
         tempPMemory[i] = partitionMemory[i];
     }
     int noOfProcesses;
-    // cout << "Enter the number of processes: ";
+    cout << "Enter the number of processes: ";
     cin >> noOfProcesses;
     int processesMemory[noOfProcesses];
     for (int i = 0; i < noOfProcesses; i++)
     {
-        // cout << "Partition " << i + 1 << ": ";
+        cout << "Partition " << i + 1 << ": ";
         cin >> processesMemory[i];
     }
     string worstFit[noOfPartitions], notAllocatedProcesses;
@@ -69,7 +69,7 @@ int main()
             notAllocatedProcesses += ", P" + to_string(i + 1);
         }
     }
-    cout << "Partitions\t\tWorst Fit\n";
+    cout << "\nPartitions\t\tWorst Fit\n";
     for (int i = 0; i < noOfPartitions; i++)
     {
         cout << tempPMemory[i] << "\t\t\t" << worstFit[i] << "\n";
