@@ -1,5 +1,5 @@
 *.pptx
 *.ppt
-*.pdf
+# *.pdf
 *.zip
 tempCodeRunnerFile.*
