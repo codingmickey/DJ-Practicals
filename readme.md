@@ -8,6 +8,6 @@
 
 ## Sem 4
 
-- CN 🕸️
-- OS 🐼
+- [CN 🕸️](https://github.com/codingmickey/DJ-Practicals/tree/master/SEM%204/CN)
+- [OS 🐼](https://github.com/codingmickey/DJ-Practicals/tree/master/SEM%204/OS)
 - [AOA 💖](https://github.com/codingmickey/dsa)
