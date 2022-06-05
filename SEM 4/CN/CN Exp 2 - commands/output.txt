@@ -1,0 +1,493 @@
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>ipconfig
+
+Windows IP Configuration
+
+
+Unknown adapter ProtonVPN TUN:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Unknown adapter Local Area Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Local Area Connection* 11:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : 
+   Link-local IPv6 Address . . . . . : fe80::6152:e1cb:609:f795%21
+   IPv4 Address. . . . . . . . . . . : 192.168.0.102
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.0.1
+
+Ethernet adapter vEthernet (WSL):
+
+   Connection-specific DNS Suffix  . : 
+   Link-local IPv6 Address . . . . . : fe80::6477:5d91:56a5:e90b%44
+   IPv4 Address. . . . . . . . . . . : 172.26.80.1
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . : 
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>ipconfig -all 
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : codingmickeys-Lapi
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Unknown adapter ProtonVPN TUN:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : ProtonVPN Tunnel
+   Physical Address. . . . . . . . . : 
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Unknown adapter Local Area Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : TAP-ProtonVPN Windows Adapter V9
+   Physical Address. . . . . . . . . : 00-FF-67-A2-02-8A
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 66-6C-80-53-98-47
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 11:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : 76-6C-80-53-98-47
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Qualcomm QCA61x4A 802.11ac Wireless Adapter
+   Physical Address. . . . . . . . . : 64-6C-80-53-98-47
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::6152:e1cb:609:f795%21(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.0.102(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Sunday, June 5, 2022 7:33:03 PM
+   Lease Expires . . . . . . . . . . : Monday, June 6, 2022 1:39:47 AM
+   Default Gateway . . . . . . . . . : 192.168.0.1
+   DHCP Server . . . . . . . . . . . : 192.168.0.1
+   DHCPv6 IAID . . . . . . . . . . . : 291794048
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-28-F7-08-4D-64-6C-80-53-98-47
+   DNS Servers . . . . . . . . . . . : 192.168.0.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter vEthernet (WSL):
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-15-5D-87-35-87
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::6477:5d91:56a5:e90b%44(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 172.26.80.1(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 738202973
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-28-F7-08-4D-64-6C-80-53-98-47
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>ping www.google.com 
+
+Pinging www.google.com [142.251.42.36] with 32 bytes of data:
+Reply from 142.251.42.36: bytes=32 time=6ms TTL=118
+Reply from 142.251.42.36: bytes=32 time=9ms TTL=118
+Reply from 142.251.42.36: bytes=32 time=6ms TTL=118
+Reply from 142.251.42.36: bytes=32 time=5ms TTL=118
+
+Ping statistics for 142.251.42.36:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 5ms, Maximum = 9ms, Average = 6ms
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo ----- Runs infinitely so output of these commands are here ----- 
+----- Runs infinitely so output of these commands are here -----
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo ping -t www.google.com 
+ping -t www.google.com
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo D:\DJSCE\Practicals-ping -t www.google.com 
+D:\DJSCE\Practicals-ping -t www.google.com
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Pinging www.google.com [142.251.42.36] with 32 bytes of data:  
+Pinging www.google.com [142.251.42.36] with 32 bytes of data: 
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Reply from 142.251.42.36: bytes=32 time=14ms TTL=118 
+Reply from 142.251.42.36: bytes=32 time=14ms TTL=118
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Reply from 142.251.42.36: bytes=32 time=5ms TTL=118 
+Reply from 142.251.42.36: bytes=32 time=5ms TTL=118
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Reply from 142.251.42.36: bytes=32 time=6ms TTL=118 
+Reply from 142.251.42.36: bytes=32 time=6ms TTL=118
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Reply from 142.251.42.36: bytes=32 time=5ms TTL=118 
+Reply from 142.251.42.36: bytes=32 time=5ms TTL=118
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Reply from 142.251.42.36: bytes=32 time=7ms TTL=118 
+Reply from 142.251.42.36: bytes=32 time=7ms TTL=118
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Ping statistics for 142.251.42.36: 
+Ping statistics for 142.251.42.36:
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo     Packets: Sent = 5, Received = 5, Lost = 0 (0 loss), 
+    Packets: Sent = 5, Received = 5, Lost = 0 (0 loss),
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Approximate round trip times in milli-seconds: 
+Approximate round trip times in milli-seconds:
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo     Minimum = 5ms, Maximum = 14ms, Average = 7ms 
+    Minimum = 5ms, Maximum = 14ms, Average = 7ms
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Control-C 
+Control-C
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo C 
+C
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo ---------------------------------------------------------------- 
+----------------------------------------------------------------
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>netstat
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49670        codingmickeys-Lapi:49671  ESTABLISHED
+  TCP    127.0.0.1:49671        codingmickeys-Lapi:49670  ESTABLISHED
+  TCP    127.0.0.1:49672        codingmickeys-Lapi:49673  ESTABLISHED
+  TCP    127.0.0.1:49673        codingmickeys-Lapi:49672  ESTABLISHED
+  TCP    127.0.0.1:55226        codingmickeys-Lapi:65001  ESTABLISHED
+  TCP    127.0.0.1:55410        codingmickeys-Lapi:55411  ESTABLISHED
+  TCP    127.0.0.1:55411        codingmickeys-Lapi:55410  ESTABLISHED
+  TCP    127.0.0.1:55414        codingmickeys-Lapi:55415  ESTABLISHED
+  TCP    127.0.0.1:55415        codingmickeys-Lapi:55414  ESTABLISHED
+  TCP    127.0.0.1:58322        codingmickeys-Lapi:58321  TIME_WAIT
+  TCP    127.0.0.1:58327        codingmickeys-Lapi:58326  TIME_WAIT
+  TCP    127.0.0.1:65001        codingmickeys-Lapi:55226  ESTABLISHED
+  TCP    192.168.0.102:49412    20.197.71.89:443       ESTABLISHED
+  TCP    192.168.0.102:51125    52.163.231.110:443     ESTABLISHED
+  TCP    192.168.0.102:51186    ec2-54-159-116-102:443  ESTABLISHED
+  TCP    192.168.0.102:51197    52.114.32.235:443      ESTABLISHED
+  TCP    192.168.0.102:51210    23.98.104.194:443      ESTABLISHED
+  TCP    192.168.0.102:51815    1:443                  CLOSE_WAIT
+  TCP    192.168.0.102:56949    52.114.16.77:443       ESTABLISHED
+  TCP    192.168.0.102:57622    whatsapp-cdn-shv-02-bom1:443  ESTABLISHED
+  TCP    192.168.0.102:58267    162.125.19.131:443     ESTABLISHED
+  TCP    192.168.0.102:58299    ec2-34-208-96-130:443  TIME_WAIT
+  TCP    192.168.0.102:58300    ec2-34-208-96-130:443  TIME_WAIT
+  TCP    192.168.0.102:58302    162.125.19.130:443     ESTABLISHED
+  TCP    192.168.0.102:58303    51.104.15.253:443      ESTABLISHED
+  TCP    192.168.0.102:58304    52.109.56.86:443       ESTABLISHED
+  TCP    192.168.0.102:58305    a-0001:443             ESTABLISHED
+  TCP    192.168.0.102:58306    204.79.197.254:443     ESTABLISHED
+  TCP    192.168.0.102:58307    a23-205-88-40:443      CLOSE_WAIT
+  TCP    192.168.0.102:58308    52.113.196.254:443     ESTABLISHED
+  TCP    192.168.0.102:58309    204.79.197.222:443     ESTABLISHED
+  TCP    192.168.0.102:58310    13.67.9.5:443          TIME_WAIT
+  TCP    192.168.0.102:58311    13.107.213.48:443      ESTABLISHED
+  TCP    192.168.0.102:58312    ec2-34-208-96-130:443  TIME_WAIT
+  TCP    192.168.0.102:58313    13.69.109.131:443      TIME_WAIT
+  TCP    192.168.0.102:58314    ec2-34-208-96-130:443  TIME_WAIT
+  TCP    192.168.0.102:58315    13.69.109.131:443      TIME_WAIT
+  TCP    192.168.0.102:58325    ec2-13-234-176-102:443  TIME_WAIT
+  TCP    192.168.0.102:58330    ec2-13-234-176-102:443  TIME_WAIT
+  TCP    192.168.0.102:58332    ec2-52-10-149-213:443  TIME_WAIT
+  TCP    192.168.0.102:58333    ec2-52-10-149-213:443  TIME_WAIT
+  TCP    192.168.0.102:58336    1:80                   ESTABLISHED
+  TCP    192.168.0.102:58342    ec2-52-10-149-213:443  TIME_WAIT
+  TCP    192.168.0.102:58343    ec2-52-10-149-213:443  TIME_WAIT
+  TCP    192.168.0.102:58348    52.98.57.162:443       ESTABLISHED
+  TCP    192.168.0.102:58351    20.189.173.3:443       ESTABLISHED
+  TCP    192.168.0.102:58352    13.67.9.5:443          TIME_WAIT
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>netstat -an 
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:3306           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:5700           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:17500          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:27121          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:33060          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49674          0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:843          0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:8884         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:9012         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:17600        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:27017        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49670        127.0.0.1:49671        ESTABLISHED
+  TCP    127.0.0.1:49671        127.0.0.1:49670        ESTABLISHED
+  TCP    127.0.0.1:49672        127.0.0.1:49673        ESTABLISHED
+  TCP    127.0.0.1:49673        127.0.0.1:49672        ESTABLISHED
+  TCP    127.0.0.1:55226        127.0.0.1:65001        ESTABLISHED
+  TCP    127.0.0.1:55227        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:55410        127.0.0.1:55411        ESTABLISHED
+  TCP    127.0.0.1:55411        127.0.0.1:55410        ESTABLISHED
+  TCP    127.0.0.1:55414        127.0.0.1:55415        ESTABLISHED
+  TCP    127.0.0.1:55415        127.0.0.1:55414        ESTABLISHED
+  TCP    127.0.0.1:55426        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        127.0.0.1:55226        ESTABLISHED
+  TCP    172.26.80.1:139        0.0.0.0:0              LISTENING
+  TCP    192.168.0.102:139      0.0.0.0:0              LISTENING
+  TCP    192.168.0.102:49412    20.197.71.89:443       ESTABLISHED
+  TCP    192.168.0.102:51125    52.163.231.110:443     ESTABLISHED
+  TCP    192.168.0.102:51186    54.159.116.102:443     ESTABLISHED
+  TCP    192.168.0.102:51197    52.114.32.235:443      ESTABLISHED
+  TCP    192.168.0.102:51210    23.98.104.194:443      ESTABLISHED
+  TCP    192.168.0.102:51815    1.186.190.107:443      CLOSE_WAIT
+  TCP    192.168.0.102:56949    52.114.16.77:443       ESTABLISHED
+  TCP    192.168.0.102:57622    31.13.79.53:443        ESTABLISHED
+  TCP    192.168.0.102:58267    162.125.19.131:443     ESTABLISHED
+  TCP    192.168.0.102:58302    162.125.19.130:443     ESTABLISHED
+  TCP    192.168.0.102:58304    52.109.56.86:443       TIME_WAIT
+  TCP    192.168.0.102:58307    23.205.88.40:443       CLOSE_WAIT
+  TCP    192.168.0.102:58311    13.107.213.48:443      TIME_WAIT
+  TCP    192.168.0.102:58336    1.186.190.161:80       TIME_WAIT
+  TCP    192.168.0.102:58342    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58343    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58352    13.67.9.5:443          TIME_WAIT
+  TCP    192.168.0.102:58357    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58358    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58368    52.114.16.179:443      TIME_WAIT
+  TCP    192.168.0.102:58375    172.64.164.2:443       TIME_WAIT
+  TCP    192.168.0.102:58376    172.64.164.2:443       TIME_WAIT
+  TCP    192.168.0.102:58377    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58378    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58381    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58382    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58383    13.227.178.85:443      TIME_WAIT
+  TCP    192.168.0.102:58384    52.113.194.132:443     TIME_WAIT
+  TCP    192.168.0.102:58385    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58387    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58388    13.67.9.5:443          TIME_WAIT
+  TCP    192.168.0.102:58389    52.37.89.96:443        TIME_WAIT
+  TCP    192.168.0.102:58390    52.37.89.96:443        TIME_WAIT
+  TCP    192.168.0.102:58391    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58392    52.10.149.213:443      TIME_WAIT
+  TCP    192.168.0.102:58395    142.251.42.10:443      TIME_WAIT
+  TCP    192.168.0.102:58396    142.251.42.10:443      TIME_WAIT
+  TCP    192.168.0.102:58397    13.67.9.5:443          TIME_WAIT
+  TCP    192.168.0.102:58398    52.10.149.213:443      ESTABLISHED
+  TCP    192.168.0.102:58399    52.10.149.213:443      ESTABLISHED
+  TCP    [::]:135               [::]:0                 LISTENING
+  TCP    [::]:445               [::]:0                 LISTENING
+  TCP    [::]:3306              [::]:0                 LISTENING
+  TCP    [::]:5700              [::]:0                 LISTENING
+  TCP    [::]:17500             [::]:0                 LISTENING
+  TCP    [::]:27121             [::]:0                 LISTENING
+  TCP    [::]:33060             [::]:0                 LISTENING
+  TCP    [::]:49664             [::]:0                 LISTENING
+  TCP    [::]:49665             [::]:0                 LISTENING
+  TCP    [::]:49666             [::]:0                 LISTENING
+  TCP    [::]:49667             [::]:0                 LISTENING
+  TCP    [::]:49668             [::]:0                 LISTENING
+  TCP    [::]:49674             [::]:0                 LISTENING
+  TCP    [::1]:49669            [::]:0                 LISTENING
+  UDP    0.0.0.0:53             *:*                    
+  UDP    0.0.0.0:500            *:*                    
+  UDP    0.0.0.0:4500           *:*                    
+  UDP    0.0.0.0:5050           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5355           *:*                    
+  UDP    0.0.0.0:17500          *:*                    
+  UDP    0.0.0.0:50263          *:*                    
+  UDP    0.0.0.0:50833          142.251.42.110:443     
+  UDP    0.0.0.0:50839          *:*                    
+  UDP    0.0.0.0:51272          *:*                    
+  UDP    0.0.0.0:55177          31.13.79.53:443        
+  UDP    0.0.0.0:55676          142.251.42.10:443      
+  UDP    0.0.0.0:56898          *:*                    
+  UDP    0.0.0.0:59145          *:*                    
+  UDP    0.0.0.0:59146          *:*                    
+  UDP    0.0.0.0:63232          *:*                    
+  UDP    0.0.0.0:63760          142.251.42.10:443      
+  UDP    0.0.0.0:64275          *:*                    
+  UDP    127.0.0.1:1900         *:*                    
+  UDP    127.0.0.1:10010        *:*                    
+  UDP    127.0.0.1:49664        127.0.0.1:49664        
+  UDP    127.0.0.1:49724        *:*                    
+  UDP    127.0.0.1:53525        *:*                    
+  UDP    172.26.80.1:137        *:*                    
+  UDP    172.26.80.1:138        *:*                    
+  UDP    172.26.80.1:1900       *:*                    
+  UDP    172.26.80.1:5353       *:*                    
+  UDP    172.26.80.1:49725      *:*                    
+  UDP    192.168.0.102:137      *:*                    
+  UDP    192.168.0.102:138      *:*                    
+  UDP    192.168.0.102:1900     *:*                    
+  UDP    192.168.0.102:5353     *:*                    
+  UDP    192.168.0.102:49723    *:*                    
+  UDP    [::]:500               *:*                    
+  UDP    [::]:4500              *:*                    
+  UDP    [::]:5353              *:*                    
+  UDP    [::]:5355              *:*                    
+  UDP    [::]:50263             *:*                    
+  UDP    [::]:50839             *:*                    
+  UDP    [::]:51272             *:*                    
+  UDP    [::]:56899             *:*                    
+  UDP    [::]:59147             *:*                    
+  UDP    [::]:63232             *:*                    
+  UDP    [::]:64275             *:*                    
+  UDP    [::1]:1900             *:*                    
+  UDP    [::1]:5353             *:*                    
+  UDP    [::1]:49721            *:*                    
+  UDP    [fe80::6152:e1cb:609:f795%21]:1900  *:*                    
+  UDP    [fe80::6152:e1cb:609:f795%21]:49720  *:*                    
+  UDP    [fe80::6477:5d91:56a5:e90b%44]:1900  *:*                    
+  UDP    [fe80::6477:5d91:56a5:e90b%44]:49722  *:*                    
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>pathping www.google.com 
+
+Tracing route to www.google.com [142.251.42.36]
+over a maximum of 30 hops:
+  0  codingmickeys-Lapi [192.168.0.102] 
+  1  192.168.0.1 
+  2  100.93.152.1 
+  3  114.79.129.57.dvois.com [114.79.129.57] 
+  4  72.14.208.165 
+  5  72.14.239.103 
+  6  142.251.69.45 
+  7  bom12s20-in-f4.1e100.net [142.251.42.36] 
+
+Computing statistics for 175 seconds...
+            Source to Here   This Node/Link
+Hop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address
+  0                                           codingmickeys-Lapi [192.168.0.102] 
+                                0/ 100 =  0%   |
+  1    3ms     0/ 100 =  0%     0/ 100 =  0%  192.168.0.1 
+                                0/ 100 =  0%   |
+  2    8ms     0/ 100 =  0%     0/ 100 =  0%  100.93.152.1 
+                                0/ 100 =  0%   |
+  3   12ms     0/ 100 =  0%     0/ 100 =  0%  114.79.129.57.dvois.com [114.79.129.57] 
+                                0/ 100 =  0%   |
+  4    7ms     0/ 100 =  0%     0/ 100 =  0%  72.14.208.165 
+                                0/ 100 =  0%   |
+  5    9ms     0/ 100 =  0%     0/ 100 =  0%  72.14.239.103 
+                                0/ 100 =  0%   |
+  6    6ms     0/ 100 =  0%     0/ 100 =  0%  142.251.69.45 
+                                0/ 100 =  0%   |
+  7    6ms     0/ 100 =  0%     0/ 100 =  0%  bom12s20-in-f4.1e100.net [142.251.42.36] 
+
+Trace complete.
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>arp -a 
+
+Interface: 192.168.0.102 --- 0x15
+  Internet Address      Physical Address      Type
+  192.168.0.1           b0-be-76-41-f4-f2     dynamic   
+  192.168.0.100         62-a4-b7-09-91-62     dynamic   
+  192.168.0.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 172.26.80.1 --- 0x2c
+  Internet Address      Physical Address      Type
+  172.26.82.232         00-15-5d-c6-cb-d8     dynamic   
+  172.26.95.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo ----- Runs infinitely so output of these commands are here ----- 
+----- Runs infinitely so output of these commands are here -----
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo nslookup 
+nslookup
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo D:\DJSCE\Practicals-nslookup 
+D:\DJSCE\Practicals-nslookup
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Default Server:  UnKnown 
+Default Server:  UnKnown
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Address:  192.168.0.1 
+Address:  192.168.0.1
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo - www.google.com 
+- www.google.com
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Server:  UnKnown 
+Server:  UnKnown
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Address:  192.168.0.1 
+Address:  192.168.0.1
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Non-authoritative answer: 
+Non-authoritative answer:
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Name:    www.google.com 
+Name:    www.google.com
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo Addresses:  2404:6800:4009:830::2004 
+Addresses:  2404:6800:4009:830::2004
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo           142.251.42.36 
+          142.251.42.36
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo - 
+-
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>echo ---------------------------------------------------------------- 
+----------------------------------------------------------------
+
+D:\DJSCE\Practicals\SEM 4\CN\CN Exp 2 - commands>tracert www.google.com 
+
+Tracing route to www.google.com [142.251.42.36]
+over a maximum of 30 hops:
+
+  1     7 ms     2 ms     2 ms  192.168.0.1 
+  2     5 ms     6 ms     6 ms  100.93.152.1 
+  3     5 ms     7 ms     4 ms  114.79.129.57.dvois.com [114.79.129.57] 
+  4     6 ms     7 ms     6 ms  72.14.208.165 
+  5    11 ms     7 ms     7 ms  72.14.239.103 
+  6     6 ms     8 ms     5 ms  142.251.69.45 
+  7     5 ms     7 ms     4 ms  bom12s20-in-f4.1e100.net [142.251.42.36] 
+
+Trace complete.
