@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+
 void modulo2Div(int n, int l, int g[], int d[], int code[])
 {
     int key[l + n], m, j, k;

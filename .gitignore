@@ -3,3 +3,5 @@
 # *.pdf
 *.zip
 tempCodeRunnerFile.*
+*.code-workspace
+*.mp4
