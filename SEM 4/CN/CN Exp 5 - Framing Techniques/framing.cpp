@@ -8,7 +8,7 @@ int main()
     int opt;
     do
     {
-        cout << "1. Character count\n2. Starting and ending with character stuffing(NOT NEEDED for pracs)\n3. Character stuffing\n4. Starting and ending Flag, with bit stuffng.\n5. Exit";
+        cout << "1. Character count\n2. Starting and ending with character stuffing(NOT NEEDED for pracs)\n3. Character stuffing\n4. Bit stuffng\n5. Exit";
         cout << "\n\nEnter an option: ";
         string data, finalData, temp;
         cin >> opt;
@@ -23,7 +23,7 @@ int main()
             {
                 cout << "Enter frame data: ";
                 cin >> temp;
-                finalData += (std::to_string(temp.length()) + temp);
+                finalData += (to_string(temp.length()) + temp);
             }
             cout << "\nFinal data: " << finalData << "\n\n";
             break;
@@ -42,14 +42,14 @@ int main()
             cout << "Enter the data: ";
             cin >> data;
             string stx = "STX", dle = "DLE";
-            int i = 0, count = 0;
+            int count = 0;
             finalData += stx + dle;
-            while (i != data.length())
+            for (int i = 0; i != data.length(); i++)
             {
                 finalData += data[i];
                 if (data[i] == 'D')
                 {
-                    count++;
+                    count = 1;
                 }
                 else if (count == 1 && data[i] == 'L')
                 {
@@ -64,7 +64,6 @@ int main()
                 {
                     count = 0;
                 }
-                i++;
             }
             finalData += dle + stx;
             cout << "\nFinal data: " << finalData << "\n\n";
