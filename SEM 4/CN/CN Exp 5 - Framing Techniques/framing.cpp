@@ -8,7 +8,7 @@ int main()
     int opt;
     do
     {
-        cout << "1. Character count\n2. Starting and ending with character stuffing\n3. Character stuffing\n4. Starting and ending Flag, with bit stuffng.\n5. Exit";
+        cout << "1. Character count\n2. Starting and ending with character stuffing(NOT NEEDED for pracs)\n3. Character stuffing\n4. Starting and ending Flag, with bit stuffng.\n5. Exit";
         cout << "\n\nEnter an option: ";
         string data, finalData, temp;
         cin >> opt;
@@ -28,15 +28,15 @@ int main()
             cout << "\nFinal data: " << finalData << "\n\n";
             break;
         }
-        case 2:
-        {
-            cout << "Enter the data: ";
-            cin >> data;
-            string stx = "STX", dle = "DLE";
-            finalData = stx + dle + data + dle + stx;
-            cout << "\nFinal data: " << finalData << "\n\n";
-            break;
-        }
+        // case 2:
+        // {
+        //     cout << "Enter the data: ";
+        //     cin >> data;
+        //     string stx = "STX", dle = "DLE";
+        //     finalData = stx + dle + data + dle + stx;
+        //     cout << "\nFinal data: " << finalData << "\n\n";
+        //     break;
+        // }
         case 3:
         {
             cout << "Enter the data: ";
@@ -74,27 +74,25 @@ int main()
         {
             cout << "Enter the data: ";
             cin >> data;
-            int i = 0, count = 0;
+            int count = 0;
             string flag = "01111110";
             finalData += flag;
-            while (i != data.length())
+            for (int i = 0; i != data.length(); i++)
             {
                 if (data[i] == '1' && count == 5)
                 {
                     count = 0;
                     finalData += '0';
                 }
-                else if (data[i] == '1')
+                if (data[i] == '1')
                 {
                     count++;
-                    finalData += data[i];
                 }
                 else if (count > 0)
                 {
                     count = 0;
-                    finalData += data[i];
                 }
-                i++;
+                finalData += data[i];
             }
             finalData += flag;
             cout << "\nFinal data: " << finalData << "\n\n";
@@ -107,7 +105,7 @@ int main()
         }
         default:
         {
-            cout << "Enter an valid OPTION!!";
+            cout << "Enter an valid OPTION!!\n\n";
         }
         }
     } while (opt != 5);
