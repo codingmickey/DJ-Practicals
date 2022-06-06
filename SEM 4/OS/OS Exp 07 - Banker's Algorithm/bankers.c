@@ -1,81 +1,107 @@
 #include <stdio.h>
-#include <stdbool.h>
-#define process 5
-#define resource 4
 
-void isSafe(int processes[], int available[], int max_req[process][resource], int allocated[process][resource])
+int main()
 {
-    int remaining_need[process][resource];
-    int order[process], index = 0;
-    for (int i = 0; i < process; i++)
+
+    int n, m;
+    printf("Enter the number of orders : ");
+    scanf("%d", &n);
+
+    printf("Enter the number of resources : ");
+    scanf("%d", &m);
+
+    int alloc[n][m], max[n][m], avail[m];
+
+    printf("Enter the details for orders\n");
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < resource; j++)
+        printf("\nOrder P%d\nEnter supplied resources : ", i);
+
+        for (int j = 0; j < m; j++)
         {
-            remaining_need[i][j] = max_req[i][j] - allocated[i][j];
+            scanf("%d", &alloc[i][j]);
+        }
+
+        printf("Enter maximum requirements : ");
+
+        for (int j = 0; j < m; j++)
+        {
+            scanf("%d", &max[i][j]);
         }
     }
-    bool check[process] = {false, false, false, false, false};
-    for (int i = 0; i < process; i++)
+    printf("\nEnter available resources : ");
+
+    for (int j = 0; j < m; j++)
     {
-        for (int j = 0; j < process; j++)
+        scanf("%d", &avail[j]);
+    }
+
+    int f[n], ans[n], ind = 0;
+    for (int i = 0; i < n; i++)
+    {
+        f[i] = 0;
+    }
+
+    int need[n][m];
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
         {
-            int count = 0;
-            if (check[j] == false)
+            need[i][j] = max[i][j] - alloc[i][j];
+        }
+    }
+
+    for (int k = 0; k < n; k++)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (f[i] == 0)
             {
-                for (int k = 0; k < resource; k++)
+                int flag = 0;
+
+                for (int j = 0; j < m; j++)
                 {
-                    if (available[k] >= remaining_need[j][k])
+                    if (need[i][j] > avail[j])
                     {
-                        count++;
-                    }
-                    else
-                    {
+                        flag = 1;
                         break;
                     }
                 }
-                if (count == resource)
+                if (flag == 0)
                 {
-                    check[j] = true;
-                    for (int l = 0; l < resource; l++)
+                    ans[ind++] = i;
+                    for (int j = 0; j < m; j++)
                     {
-                        available[l] += allocated[j][l];
+                        avail[j] += alloc[i][j];
                     }
-                    order[index] = j;
-                    index++;
+                    f[i] = 1;
                 }
             }
-            else
-            {
-                continue;
-            }
         }
     }
-    if (index == process)
+
+    int flag = 1;
+
+    for (int i = 0; i < n; i++)
     {
-        printf("No deadlock will happen, its safe\nThe order is: \n");
-        for (int p = 0; p < process; p++)
+        if (f[i] == 0)
         {
-            printf("The order is : %d \n", order[p]);
+            flag = 0;
+            printf("\ntThe given sequence is not safe \n");
+            break;
         }
     }
-    else
+
+    if (flag == 1)
     {
-        printf("deadlock will happen, its unsafe\n");
+        printf("\nFollowing is SAFE Sequence \n");
+        for (int i = 0; i < n - 1; i++)
+        {
+            printf(" P%d ->", ans[i]);
+        }
+        printf(" P%d", ans[n - 1]);
     }
-}
-int main()
-{
-    int processes[process] = {0, 1, 2, 3, 4};
-    int available[process] = {1, 5, 2, 0};
-    int allocated[process][resource] = {{0, 0, 1, 2},
-                                        {1, 0, 0, 0},
-                                        {1, 3, 5, 4},
-                                        {0, 6, 3, 2},
-                                        {0, 0, 1, 4}};
-    int max_req[process][resource] = {{0, 0, 1, 2},
-                                      {1, 7, 5, 0},
-                                      {2, 3, 5, 6},
-                                      {0, 6, 5, 2},
-                                      {0, 6, 5, 6}};
-    isSafe(processes, available, max_req, allocated);
+
+    return 0;
 }
