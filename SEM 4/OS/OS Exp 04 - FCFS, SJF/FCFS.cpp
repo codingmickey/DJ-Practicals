@@ -1,61 +1,119 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+
+struct Process
+{
+    int no, at, bt, ct, tat, wt;
+};
+
+void sortPro(struct Process *program, int start, int end, bool isAt)
+{
+    if (isAt)
+    {
+        for (int i = start; i < end; i++)
+        {
+            for (int j = start; j <= end - i - 1; j++)
+            {
+                if (program[j].at > program[j + 1].at)
+                {
+                    struct Process temp = program[j];
+                    program[j] = program[j + 1];
+                    program[j + 1] = temp;
+                }
+            }
+        }
+    }
+    else
+    {
+        for (int i = start; i < end; i++)
+        {
+            if (program[i].bt > program[i + 1].bt)
+            {
+                struct Process temp;
+                temp = program[i];
+                program[i + 1] = temp;
+                program[i] = program[i + 1];
+            }
+        }
+    }
+}
+
 int main()
 {
-    vector<pair<float, float>> vect;
-    vector<float> TT;
-    vector<float> WT;
-    int burst = 0, Total = 0;
-    int p;
-    cout << "Enter no processess: ";
-    cin >> p;
-    float AT[p], BT[p];
-    cout << "Now enter the times in order of->\nAT BT\n";
-    for (int i = 0; i < p; i++)
+    int noOfProcesses;
+    printf("Enter the number of processes: ");
+    // scanf("%d", &noOfProcesses);
+    noOfProcesses = 3;
+
+    int ptime = 0;
+    float atat = 0, awt = 0;
+
+    struct Process program[noOfProcesses];
+
+    printf("Enter the arrival times\n");
+    for (int i = 0; i < noOfProcesses; i++)
     {
-        cin >> AT[i];
-        cin >> BT[i];
+        printf("ARRIVAL Time of %d: ", (i + 1));
+        // scanf("%d", &program[i].at);
+        program[i].at = 4 - i;
+        program[i].no = i;
     }
-    int n = sizeof(AT) / sizeof(AT[0]);
-    for (int i = 0; i < n; i++)
+
+    printf("Enter the burst times\n");
+    for (int i = 0; i < noOfProcesses; i++)
     {
-        vect.push_back(make_pair(AT[i], BT[i]));
+        printf("BURST Time of %d: ", (i + 1));
+        // scanf("%d", &program[i].bt);
+        program[i].bt = 5 + i;
     }
-    sort(vect.begin(), vect.end());
-    int cmpl_T = 0;
-    Total = 0;
-    for (int i = 0; i < n; i++)
+
+    for (int i = 0; i < noOfProcesses; i++)
     {
-        int tt = 0;
-        cmpl_T += vect[i].second;
-        tt = cmpl_T - vect[i].first;
-        TT.push_back(tt);
-        Total += TT[i];
+        printf("\nP%d\t%d\t%d\n", (i + 1), program[i].at, program[i].bt);
     }
-    float Avg_TT = Total / (float)n;
-    float total_wt = 0;
-    for (int i = 0; i < n; i++)
+
+    sortPro(program, 0, noOfProcesses - 1, true);
+
+    for (int i = 0; i < noOfProcesses; i++)
     {
-        int wt = 0;
-        if (i == 0)
+        printf("P%d\t%d\t%d\n", (i + 1), program[i].at, program[i].bt);
+    }
+
+    printf("Order of execution of the Processes are:\n");
+    for (int i = 0; i < noOfProcesses; i++)
+    {
+        if (i == noOfProcesses - 1)
+            printf("P%d\n", program[i].no);
+        else
+            printf("P%d, ", program[i].no);
+    }
+
+    int i;
+    for (i = 0; i < noOfProcesses; i++)
+    {
+        if (i == 0 && program[i].at != 0)
         {
-            wt = TT[i] - vect[i].second;
-            WT.push_back(wt);
+            ptime = program[i].at + program[i].bt;
         }
         else
         {
-            wt = TT[i] - vect[i].second;
-            WT.push_back(wt);
-            total_wt += WT[i];
+            ptime += program[i].bt;
         }
+        program[i].ct = ptime;
+        program[i].tat = program[i].ct - program[i].at;
+        program[i].wt = program[i].tat - program[i].bt;
+        atat += program[i].tat;
+        awt += program[i].wt;
     }
-    float Avg_WT = total_wt / n;
-    printf("Process\tWT \tTAT\n");
-    for (int i = 0; i < n; i++)
+    atat /= noOfProcesses;
+    awt /= noOfProcesses;
+
+    printf("\nAnalysis Table\nProcess\tAT\tBT\tCT\tTAT\tWT\n");
+    for (int i = 0; i < noOfProcesses; i++)
     {
-        printf("%d\t%.2f\t%.2f\n", i + 1, WT[i], TT[i]);
+        printf("P%d\t%d\t%d\t%d\t%d\t%d\n", program[i].no, program[i].at, program[i].bt, program[i].ct, program[i].tat, program[i].wt);
     }
-    printf("Average turn around time is : %.2f\n", Avg_TT);
-    printf("Average waiting time is : %.2f\n", Avg_WT);
+    printf("Average Turn Around Time = %f\n", atat);
+    printf("Average Waiting Time = %f\n", awt);
+
     return 0;
 }
