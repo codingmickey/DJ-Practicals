@@ -43,14 +43,15 @@ vector<bool> binaryAddition(vector<bool> a, vector<bool> b, int n)
             ans[i] = 1;
             carry = 1;
         }
-        else if ((a[i] == 1 && b[i] == 1 && !carry) || ((a[i] == 1) || (b[i] == 1) && carry))
+        else if ((a[i] == 1 && b[i] == 1) || ((a[i] == 1) || (b[i] == 1) && carry))
         {
             ans[i] = 0;
             carry = 1;
         }
-        else
+        else 
         {
-            ans[i] = a[i] + b[i];
+            ans[i] = a[i] + b[i] + carry;
+            carry = 0;
         }
     }
     return ans;
@@ -84,7 +85,7 @@ int main()
     string qtemp, mtemp;
     // Then storing the number in a vector(Array) for easy access
     vector<bool> q, m, a, negM;
-    bool qNeg = 0, q0;
+    bool qNeg = 0;
 
     // We'll be taking the input in binary format only
     cout << "Enter m: ";
@@ -100,7 +101,7 @@ int main()
     else
         n = qtemp.length();
 
-    int count = n + 1;
+    int count = n;
 
     // Assigning the Accumulator with 0's
     for (int i = 0; i < n; i++)
@@ -129,15 +130,31 @@ int main()
 
     vector<bool> ans = binaryAddition(m, q, n);
 
+    cout<<count<<"\n";
+
     while (count--)
     {
-        if (q[0] == 1 && qNeg == 0)
+        cout << "1a";
+        for (auto x : a)
+            cout << x;
+
+        cout << "\n";
+        for (auto x : m)
+            cout << x;
+
+        cout << "\n";
+        cout << "q";
+        for (auto x : q)
+            cout << x;
+
+        cout << "\n";
+        cout << "\n";
+        if (q[n-1] == 1 && qNeg == 0)
             a = binaryAddition(a, negM, n);
-        else if (q[0] == 0 && qNeg == 1)
+        else if (q[n-1] == 0 && qNeg == 1)
             a = binaryAddition(a, m, n);
 
-        qNeg = arithmeticRightShift(a, q);
-        cout << "a";
+            cout << "2a";
         for (auto x : a)
             cout << x;
 
@@ -146,6 +163,22 @@ int main()
         for (auto x : q)
             cout << x;
 
+        cout << "\n";
+        cout << "\n";
+
+        qNeg = arithmeticRightShift(a, q);
+        cout << "3a";
+        for (auto x : a)
+            cout << x;
+
+        cout << "\n";
+        cout << "q";
+        for (auto x : q)
+            cout << x;
+            cout<<"\n";
+            cout<<qNeg;
+
+        cout << "\n";
         cout << "\n";
     };
 
