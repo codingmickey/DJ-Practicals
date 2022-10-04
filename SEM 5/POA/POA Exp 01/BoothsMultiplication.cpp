@@ -48,7 +48,7 @@ vector<bool> binaryAddition(vector<bool> a, vector<bool> b, int n)
             ans[i] = 0;
             carry = 1;
         }
-        else 
+        else
         {
             ans[i] = a[i] + b[i] + carry;
             carry = 0;
@@ -88,9 +88,9 @@ int main()
     bool qNeg = 0;
 
     // We'll be taking the input in binary format only
-    cout << "Enter m: ";
+    cout << "Enter m(first number): ";
     cin >> mtemp;
-    cout << "Enter q: ";
+    cout << "Enter q(second number): ";
     cin >> qtemp;
 
     // Counter
@@ -130,63 +130,68 @@ int main()
 
     vector<bool> ans = binaryAddition(m, q, n);
 
-    cout<<count<<"\n";
+    cout << "\nA\tQ\tQ-1\tn\tAction\n";
 
-    while (count--)
+    while (count)
     {
-        cout << "1a";
+        // --- Init Printing format ---
         for (auto x : a)
             cout << x;
-
-        cout << "\n";
-        for (auto x : m)
-            cout << x;
-
-        cout << "\n";
-        cout << "q";
+        cout << "\t";
         for (auto x : q)
             cout << x;
+        cout << "\t" << qNeg << "\t" << count << "\t"
+             << "Init"
+             << "\n";
+        // --- Init Printing format ---
 
-        cout << "\n";
-        cout << "\n";
-        if (q[n-1] == 1 && qNeg == 0)
+        if (q[n - 1] == 1 && qNeg == 0)
+        {
             a = binaryAddition(a, negM, n);
-        else if (q[n-1] == 0 && qNeg == 1)
+            // --- A-M Printing format ---
+            for (auto x : a)
+                cout << x;
+            cout << "\t";
+            for (auto x : q)
+                cout << x;
+            cout << "\t" << qNeg << "\t" << count << "\t"
+                 << "A-M"
+                 << "\n";
+            // --- A-M Printing format ---
+        }
+        else if (q[n - 1] == 0 && qNeg == 1)
+        {
             a = binaryAddition(a, m, n);
-
-            cout << "2a";
-        for (auto x : a)
-            cout << x;
-
-        cout << "\n";
-        cout << "q";
-        for (auto x : q)
-            cout << x;
-
-        cout << "\n";
-        cout << "\n";
-
+            // --- A+M Printing format ---
+            for (auto x : a)
+                cout << x;
+            cout << "\t";
+            for (auto x : q)
+                cout << x;
+            cout << "\t" << qNeg << "\t" << count << "\t"
+                 << "A+M"
+                 << "\n";
+            // --- A+M Printing format ---
+        }
         qNeg = arithmeticRightShift(a, q);
-        cout << "3a";
+        count--;
+        // --- Arithmetic Right Shift + n-- Printing format ---
         for (auto x : a)
             cout << x;
-
-        cout << "\n";
-        cout << "q";
+        cout << "\t";
         for (auto x : q)
             cout << x;
-            cout<<"\n";
-            cout<<qNeg;
-
-        cout << "\n";
-        cout << "\n";
+        cout << "\t" << qNeg << "\t" << count << "\t"
+             << "Arithmetic Right Shift + n--"
+             << "\n\n";
+        // --- Arithmetic Right Shift + n-- Printing format ---
     };
 
-    cout << "Answer: ";
+    cout << "A\tQ\n";
     for (auto x : a)
         cout << x;
 
-    cout << "\n";
+    cout << "\t";
     for (auto x : q)
         cout << x;
 
