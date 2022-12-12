@@ -81,12 +81,12 @@ void arithmeticLeftShift(vector<bool> &a, vector<bool> &q)
     bool kachra = q[q.size() - 1], prev = a[0], temp;
     for (int i = 0; i < a.size() - 1; i++)
     {
-        a[i] = a[i+1];
+        a[i] = a[i + 1];
     }
     a[a.size() - 1] = q[0];
     for (int i = 0; i < q.size() - 1; i++)
     {
-        q[i] = q[i+1];
+        q[i] = q[i + 1];
     }
 }
 
@@ -99,9 +99,9 @@ int main()
     bool qNeg = 0;
 
     // We'll be taking the input in binary format only
-    cout << "Enter m: ";
+    cout << "Enter m(divisor): ";
     cin >> mtemp;
-    cout << "Enter q: ";
+    cout << "Enter q(dividend): ";
     cin >> qtemp;
 
     // Counter
@@ -111,7 +111,7 @@ int main()
     //     n = mtemp.length();
     // else
     //     n = qtemp.length();
-        
+
     n = qtemp.length();
 
     int count = n;
@@ -121,9 +121,10 @@ int main()
     {
         a.push_back(0);
     }
-    
-    int mtempNum = (n+1)-mtemp.length();
-    while(mtempNum>0) {
+
+    int mtempNum = (n + 1) - mtemp.length();
+    while (mtempNum > 0)
+    {
         m.push_back(0);
         mtempNum--;
     }
@@ -149,65 +150,104 @@ int main()
 
     vector<bool> ans = binaryAddition(m, q, n);
 
-    while (count--)
+    cout << "\nA\tQ\tn\tAction\n\n";
+
+    while (count)
     {
+        // --- Init Printing format ---
+        for (auto x : a)
+            cout << x;
+        cout << "\t";
+        for (auto x : q)
+            cout << x;
+        cout << "\t" << count << "\t"
+             << (count == n ? "Init" : "n--")
+             << "\n";
+        // --- Init Printing format ---
         arithmeticLeftShift(a, q);
-        cout << "1a";
+        // --- Shift LEFT Printing format ---
         for (auto x : a)
             cout << x;
-
-        cout << "\n";
-        for (auto x : m)
-            cout << x;
-
-        cout << "\n";
-        cout << "q";
+        cout << "\t";
+        int tempCount = 0;
         for (auto x : q)
-            cout << x;
-
-        cout << "\n";
-        cout << "\n";
-        
-        a = binaryAddition(a, negM, n+1);
-        
-            cout << "2a";
-        for (auto x : a)
-            cout << x;
-
-        cout << "\n";
-        cout << "q";
-        for (auto x : q)
-            cout << x;
-
-        cout << "\n";
-        cout << "\n";
-        
-        // a[0] = 1 means the number is -ve
-        if(a[0]) {
-            q[q.size()-1] = 0;
-            a = binaryAddition(a, m, n+1);
-        } else {
-            q[q.size()-1] = 1;
+        {
+            tempCount++;
+            cout << ((tempCount == n) ? "_" : to_string(x));
         }
-        
-        cout << "3a";
+        cout << "\t" << count << "\t"
+             << "Shift LEFT"
+             << "\n";
+        // --- Shift LEFT Printing format ---
+
+        a = binaryAddition(a, negM, n + 1);
+
+        // --- A-M Printing format ---
         for (auto x : a)
             cout << x;
-
-        cout << "\n";
-        cout << "q";
+        cout << "\t";
+        tempCount = 0;
         for (auto x : q)
-            cout << x;
-            cout<<"\n";
+        {
+            tempCount++;
+            cout << ((tempCount == n) ? "_" : to_string(x));
+        }
+        cout << "\t" << count << "\t"
+             << "A-M"
+             << "\n";
+        // --- A-M Printing format ---
+
+        // a[0] = 1 means the number is -ve
+        if (a[0])
+        {
+            q[q.size() - 1] = 0;
+            a = binaryAddition(a, m, n + 1);
+            // --- Q0<-0, A-M Printing format ---
+            for (auto x : a)
+                cout << x;
+            cout << "\t";
+            // int tempCount = 0;
+            for (auto x : q)
+            {
+                // tempCount++;
+                // cout << ((tempCount == n) ? "_" : to_string(x));
+                cout << x;
+            }
+            cout << "\t" << count << "\t"
+                 << "Q0<-0, A-M"
+                 << "\n";
+            // --- Q0<-0, A-M Printing format ---
+        }
+        else
+        {
+            q[q.size() - 1] = 1;
+            // --- Q0<-1 Printing format ---
+            for (auto x : a)
+                cout << x;
+            cout << "\t";
+            // int tempCount = 0;
+            for (auto x : q)
+            {
+                // tempCount++;
+                // cout << ((tempCount == n) ? "_" : to_string(x));
+                cout << x;
+            }
+            cout << "\t" << count << "\t"
+                 << "Q0<-1"
+                 << "\n";
+            // --- Q0<-1 Printing format ---
+        }
         cout << "\n";
+        count--;
     };
-    
-    cout << "Answer: ";
-    for (auto x : a)
+
+    cout << "Quotient: ";
+    for (auto x : q)
         cout << x;
 
     cout << "\n";
-    for (auto x : q)
+    cout << "Remainder: ";
+    for (auto x : a)
         cout << x;
 
     return 0;
