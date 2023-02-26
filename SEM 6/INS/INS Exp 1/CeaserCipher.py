@@ -30,12 +30,16 @@ def brute_force_attack(ciphertext):
 
 # Example usage
 message = 'This is a secret message'
-shift = 3
+shift = 5
+
+print("PLAIN TEXT:", message)
+print()
 
 ciphertext = encrypt(message, shift)
-print(ciphertext) # Output: Wklv lv d vhfuhw phvvdjh.
+print("CIPHER TEXT:", ciphertext)
 
 decrypted_message = decrypt(ciphertext, shift)
-print(decrypted_message) # Output: This is a secret message.
+print("DECRYPTED TEXT:", decrypted_message)
+print()
 
 brute_force_attack(ciphertext)
